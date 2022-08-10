@@ -6,5 +6,31 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = '04-app-Citas';
+
+  // ===================
+  // === propiedades ===
+  // ===================
+  // - las propiedades de la clase
+  // - son las que vamos a usar
+  // - para visualizarlas dentro del HTML
+  // - que esté asociado a esta clase
+  listCitas: any[] = [];
+
+  // ===================
+  // === constructor ===
+  // ===================
+  // - sólo para inicializar variables/propiedades de la clase
+  // - pasar parámetros
+
+  // ===============
+  // === métodos ===
+  // ===============
+  agregarCita(cita: any) {
+    this.listCitas.push(cita);
+    console.log(this.listCitas);
+  }
+
+  eliminarCitaListado(index: number) {
+    this.listCitas.splice(index, 1);
+  }
 }
